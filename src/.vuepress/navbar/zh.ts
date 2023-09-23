@@ -5,7 +5,7 @@ export const zhNavbar = navbar([
   "/use",
   {
     text: "官方QQ群",
-    icon: "book",
+    icon: "fab fa-qq",
     link: "https://theme-hope.vuejs.press/zh/",
   },
 ]);

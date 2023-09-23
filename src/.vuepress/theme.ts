@@ -3,6 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
+  sidebar: ["/use/README.md", "/guide/README.md", "/config/README.md"],
   hostname: "https://wiki.tcbmc.cc",
 
   author: {
@@ -10,7 +11,12 @@ export default hopeTheme({
     url: "https://littlesheep.com",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: [
+    "iconfont",
+    "fontawesome-with-brands",
+    "https://npm.elemecdn.com/font6pro@6.4.0/css/fontawesome.min.css",
+    "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
+  ],
 
   logo: "https://m1.miaomc.cn/uploads/20230923_650e8b5275c21.png",
 

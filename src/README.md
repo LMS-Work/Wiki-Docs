@@ -1,7 +1,7 @@
 ---
 home: true
 title: 主页
-icon: home
+icon: fa fa-home
 heroImage: https://m1.miaomc.cn/uploads/20230923_650e8b5275c21.png
 heroText: LMS Server Wiki
 tagline: 基于1.20.1 Purpur核心的生电养老型服务器 ✨
