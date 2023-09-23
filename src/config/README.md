@@ -1,9 +1,9 @@
 ---
-title: 命令介绍
+title: 客户端配置
 index: false
 icon: laptop-code
 category:
-  - 命令介绍
+  - 客户端配置
 ---
 
 ## 目录

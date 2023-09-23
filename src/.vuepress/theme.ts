@@ -3,18 +3,18 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://wiki.tcbmc.cc",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "YangXiaoMian",
+    url: "https://littlesheep.com",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/logo.svg",
+  logo: "https://m1.miaomc.cn/uploads/20230923_650e8b5275c21.png",
 
-  repo: "LMS-Work/docs",
+  repo: "LLMS-Work/Wiki-Docs",
 
   docsDir: "src",
 
