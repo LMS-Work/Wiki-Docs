@@ -1,7 +1,7 @@
 ---
 title: 基础使用教程
 index: false
-icon: iconfont icon-creative
+icon: fa-solid fa-lightbulb
 category:
   - 使用教程
 ---

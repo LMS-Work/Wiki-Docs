@@ -29,6 +29,13 @@ export default defineUserConfig({
         rel: "stylesheet"
       }
     ],
+    [
+      "link",
+      {
+        href: "https://file-cdn.dl.us-cf.v30.one/MiSans/MiSans-Demibold.ttf",
+        rel: "stylesheet",
+      },
+    ],
     // [
     //   "script",
     //   {

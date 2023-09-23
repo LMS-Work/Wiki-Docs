@@ -1,17 +1,10 @@
 ---
-title: 命令介绍
+title: 服务器玩法&命令介绍
 index: false
-icon: laptop-code
+icon: fa-solid fa-terminal
 category:
   - 命令介绍
 ---
 
 ## 目录
 
-- [Markdown 展示](markdown.md)
-
-- [页面展示](page.md)
-
-- [禁用展示](disable.md)
-
-- [加密展示](encrypt.md)

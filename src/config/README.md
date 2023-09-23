@@ -1,7 +1,7 @@
 ---
 title: 客户端配置
 index: false
-icon: laptop-code
+icon: fa-solid fa-square-check
 category:
   - 客户端配置
 ---
