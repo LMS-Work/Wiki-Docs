@@ -20,7 +20,7 @@ export default hopeTheme({
 
   logo: "https://m1.miaomc.cn/uploads/20230923_650e8b5275c21.png",
 
-  repo: "LLMS-Work/Wiki-Docs",
+  repo: "LMS-Work/Wiki-Docs",
 
   docsDir: "src",
 
