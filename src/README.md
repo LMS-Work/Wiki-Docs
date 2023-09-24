@@ -9,14 +9,14 @@ bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 actions:
   - text: 基础使用教程 🧭
-    link: /use/
+    link: /home/use/
     type: primary
 
   - text: 命令介绍 💡
-    link: /guide/
+    link: /home/guide/
 
   - text: 客户端配置 🛠
-    link: /config/
+    link: /home/config/
 
 features:
   - title: 命令

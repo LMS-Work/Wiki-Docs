@@ -2,9 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/",
-  "/use",
-  "/guide",
-  "/config",
+  "/home",
   {
     text: "官方QQ群",
     icon: "fab fa-qq",
