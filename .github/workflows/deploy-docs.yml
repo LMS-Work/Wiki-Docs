@@ -12,6 +12,7 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: lms-work/wiki-docs
-        TARGET_BRANCH: master
+        TARGET_BRANCH: main
         BUILD_SCRIPT: yarn && yarn docs:build
         BUILD_DIR: src/.vuepress/dist
+        COMMIT_MESSAGE: Auto deploy from Github Actions
