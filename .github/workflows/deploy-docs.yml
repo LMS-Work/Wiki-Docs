@@ -1,47 +1,25 @@
+#!/usr/bin/env sh
 
-name: 部署文档
+# 确保脚本抛出遇到的错误
+set -e
 
-on:
-  push:
-    branches:
-      # 确保这是你正在使用的分支名称
-      - main
+# 生成静态文件
+pnpm docs:build
 
-permissions:
-  contents: write
+# 进入生成的文件夹
+cd docs/.vuepress/dist
 
-jobs:
-  deploy-gh-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
+# 如果是发布到自定义域名
+# echo 'www.example.com' > CNAME
 
+git init
+git add -A
+git commit -m 'deploy'
 
+# 如果发布到 https://<USERNAME>.github.io
+git push -f git@github.com:lms-work.github.io.git master
 
-      - name: 设置 Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
-      - name: 安装依赖
-        run: npm ci
-
-      - name: 构建文档
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          npm run docs:build
-          > src/.vuepress/dist/.nojekyll
-
-      - name: 部署文档
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 这是文档部署到的分支名称
-          branch: gh-pages
-          folder: src/.vuepress/dist
+cd -
