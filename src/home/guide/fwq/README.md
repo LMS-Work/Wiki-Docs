@@ -1,11 +1,11 @@
 ---
-title: 1.生存组用户命令
+title: 2.服务器机制目录
 index: false
-icon: fa-solid fa-stopwatch-20
+icon: fa-solid fa-server
 category:
   - 命令介绍
 tag:
-  - 生存组用户命令
+  - 服务器机制目录
 order: 2
 ---
 
