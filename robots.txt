@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://wiki.tcbmc.cc/sitemap.xml
