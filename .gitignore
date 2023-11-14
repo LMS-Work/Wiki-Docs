@@ -6,3 +6,6 @@ src/.vuepress/dist/
 'node_modules' 
 '.temp' 
 '.cache' 
+'node_modules' 
+'.temp' 
+'.cache' 
