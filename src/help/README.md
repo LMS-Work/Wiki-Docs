@@ -1,8 +1,10 @@
 ---
-title: 基础使用教程
-index: false
+shortTitle: 说明
+title: 帮助
+index: true
 icon: fa-solid fa-lightbulb
 isOriginal: true
+date: 2024-07-08
 category:
   - 使用教程
 ---

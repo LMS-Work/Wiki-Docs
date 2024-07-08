@@ -1,8 +1,8 @@
 import { navbar } from "vuepress-theme-hope";
 
-export const zhNavbar = navbar([
+export default navbar([
   "/",
-  "/home",
+  "/help/",
   {
     text: "官方QQ群",
     icon: "fab fa-qq",

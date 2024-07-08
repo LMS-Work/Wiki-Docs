@@ -1,91 +1,69 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+
+import navbar from "./navbar.js";
+import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  sidebar: ["/use/README.md", "/guide/README.md", "/config/README.md"],
-  hostname: "https://wiki.tcbmc.cc",
+  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
   author: {
-    name: "YangXiaoMian",
-    url: "https://littlesheep.cc",
+    name: "LittleSheep Minecraft Team",
+    url: "https://www.tcbmc.cc",
   },
 
-  iconAssets: [
-    "iconfont",
-    "fontawesome-with-brands",
-    "https://npm.elemecdn.com/font6pro@6.4.0/css/fontawesome.min.css",
-    "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
-  ],
+  iconAssets: "fontawesome-with-brands",
 
-  logo: "https://m1.miaomc.cn/uploads/20230923_650e8b5275c21.png",
+  logo: "https://i1.mcobj.com/imgb/u15prb/20240708_668bbc15a046d.webp",
 
-  repo: "LMS-Work/Wiki-Docs",
+  repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
 
-  locales: {
-    "/": {
-      // navbar
-      navbar: zhNavbar,
+  // 导航栏
+  navbar,
 
-      // sidebar
-      sidebar: zhSidebar,
+  // 侧边栏
+  sidebar,
 
-      footer: "Power By TCB Work's Minecraft Server",
+  // 页脚
+  footer: "默认页脚",
+  displayFooter: true,
 
-      displayFooter: true,
-
-      metaLocales: {
-        editLink: "在 Github 上面编辑此页",
-      },
-    },
-
-    /**
-     * Chinese locale config
-     */
-    "/en": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer: "Power By TCB Work's Minecraft Server",
-
-      displayFooter: true,
-
-      // page meta
-      metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
-    },
+  // 多语言配置
+  metaLocales: {
+    editLink: "在 GitHub 上编辑此页",
   },
 
-  plugins: {
-    // You should generate and use your own comment service
+  // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
+  // hotReload: true,
 
-    // All features are enabled for demo, only preserve features you need here
+  // 在这里配置主题提供的插件
+  plugins: {
+    // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
+    comment: {
+      provider: "Giscus",
+      repo: "vuepress-theme-hope/giscus-discussions",
+      repoId: "R_kgDOG_Pt2A",
+      category: "Announcements",
+      categoryId: "DIC_kwDOG_Pt2M4COD69",
+    },
+
+    components: {
+      components: ["Badge", "VPCard"],
+    },
+
     mdEnhance: {
       align: true,
       attrs: true,
-      chart: true,
       codetabs: true,
-      demo: true,
-      echarts: true,
+      component: true,
       figure: true,
-      flowchart: true,
-      gfm: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
-      katex: true,
       mark: true,
-      mermaid: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      presentation: ["highlight", "math", "search", "notes", "zoom"],
+      plantuml: true,
+      spoiler: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -102,15 +80,53 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
+      tasklist: true,
       vPre: true,
-      vuePlayground: true,
+
+      // 在启用之前安装 chart.js
+      // chart: true,
+
+      // insert component easily
+
+      // 在启用之前安装 echarts
+      // echarts: true,
+
+      // 在启用之前安装 flowchart.ts
+      // flowchart: true,
+
+      // gfm requires mathjax-full to provide tex support
+      // gfm: true,
+
+      // 在启用之前安装 katex
+      // katex: true,
+
+      // 在启用之前安装 mathjax-full
+      // mathjax: true,
+
+      // 在启用之前安装 mermaid
+      // mermaid: true,
+
+      // playground: {
+      //   presets: ["ts", "vue"],
+      // },
+
+      // 在启用之前安装 reveal.js
+      // revealJs: {
+      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+      // },
+
+      // 在启用之前安装 @vue/repl
+      // vuePlayground: true,
+
+      // install sandpack-vue3 before enabling it
+      // sandpack: true,
     },
 
-    // uncomment these if you want a pwa
+    // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
     //   favicon: "/favicon.ico",
     //   cacheHTML: true,
-    //   cachePic: true,
+    //   cacheImage: true,
     //   appendBase: true,
     //   apple: {
     //     icon: "/assets/icon/apple-icon-152.png",

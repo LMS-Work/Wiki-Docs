@@ -1,52 +1,29 @@
 import { defineUserConfig } from "vuepress";
-import { defaultTheme } from "@vuepress/theme-default";
-import { viteBundler } from "@vuepress/bundler-vite";
+
 import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
+
+  lang: "zh-CN",
+  title: "LittleSheep Minecraft Wiki",
+  description: "LittleSheep Minecraft Wiki",
+
   head: [
+
+    // 字体导入相应链接
     [
       "link",
       {
-        type: "text/css",
+        href: "https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.min.css",
         rel: "stylesheet",
-        href: "https://npm.elemecdn.com/font6pro@6.4.0/css/fontawesome.min.css",
-        media: "all"
-      }
-    ],
-    [
-      "link",
-      {
-        href: "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
-        rel: "stylesheet"
-      }
-    ],
-    [
-      "link",
-      {
-        href: "https://assest.cdn.littlesheep.cc/misans@3.1.1/lib/misans-400-normal.min.css",
-        rel: "stylesheet",
+        crossorigin: "anonymous"
       },
     ],
   ],
 
-  locales: {
-    "/": {
-      lang: "zh-CN",
-      title: "LMS Wiki",
-      description: "LMS服务器的使用与命令文档",
-    },
-    "/en/": {
-      lang: "zh-CN",
-      title: "LMS Wiki",
-      description: "LMS服务器的使用与命令文档",
-    },
-  },
+  theme,
 
-  theme: defaultTheme(theme),
-  bundler: viteBundler(),
-
-  // Enable it with pwa
+  // 和 PWA 一起启用
   // shouldPrefetch: false,
 });
