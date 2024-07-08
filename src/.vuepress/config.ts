@@ -10,7 +10,6 @@ export default defineUserConfig({
   description: "LittleSheep Minecraft Wiki",
 
   head: [
-
     // 字体导入相应链接
     [
       "link",
@@ -23,7 +22,4 @@ export default defineUserConfig({
   ],
 
   theme,
-
-  // 和 PWA 一起启用
-  // shouldPrefetch: false,
 });

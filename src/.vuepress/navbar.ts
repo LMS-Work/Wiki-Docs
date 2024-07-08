@@ -6,6 +6,6 @@ export default navbar([
   {
     text: "官方QQ群",
     icon: "fab fa-qq",
-    link: "https://b.d4t.cn/QgZNSn",
+    link: "https://qm.qq.com/q/zskxK4cXa8",
   },
 ]);
