@@ -1,4 +1,6 @@
 import { defineUserConfig } from "vuepress";
+import { defaultTheme } from "@vuepress/theme-default";
+import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -27,15 +29,6 @@ export default defineUserConfig({
         rel: "stylesheet",
       },
     ],
-    // [
-    //   "script",
-    //   {
-    //     type: "text/javascript",
-    //     charset: "UTF-8",
-    //     src: "/global.js",
-    //     async: true,
-    //   },
-    // ],
   ],
 
   locales: {
@@ -51,7 +44,8 @@ export default defineUserConfig({
     },
   },
 
-  theme,
+  theme: defaultTheme(theme),
+  bundler: viteBundler(),
 
   // Enable it with pwa
   // shouldPrefetch: false,
