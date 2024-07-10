@@ -7,11 +7,11 @@ heroText: LMS Server Wiki
 tagline: 基于 Mohist 核心的机械动力/女仆/建筑服务器
 actions:
   - text: 怎么进入服务器 🧭
-    link: /help/join/
+    link: /help/join/1.html
     type: primary
 
   - text: 玩法介绍 💡
-    link: /help/game/
+    link: /help/game/1.html
 
 highlights:
   - header: 关于我们
