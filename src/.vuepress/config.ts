@@ -14,7 +14,7 @@ export default defineUserConfig({
     [
       "link",
       {
-        href: "https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.min.css",
+        href: "https://cdn.jsdelivr.net/gh/znc15/harmonyfont/font.css",
         rel: "stylesheet",
         crossorigin: "anonymous"
       },
