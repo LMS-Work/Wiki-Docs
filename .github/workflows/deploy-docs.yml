@@ -1,10 +1,15 @@
-
 name: 部署文档
 
 on:
   push:
     branches:
       - main
+    paths:
+      # 只在文档相关文件改动时触发
+      - 'src/**'
+      - 'docs/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
 
 permissions:
   contents: write
@@ -32,17 +37,38 @@ jobs:
           node-version: 20
           cache: pnpm
 
-      - name: 安装依赖
+      # 添加 pnpm 缓存
+      - name: 获取 pnpm 存储目录
+        id: pnpm-cache
         run: |
-          corepack enable
-          pnpm install --frozen-lockfile
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: 设置 pnpm 缓存
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
+        run: |
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
+        # 添加错误处理
+        continue-on-error: false
+
+      - name: 检查构建输出
+        run: |
+          if [ ! -d "src/.vuepress/dist" ]; then
+            echo "构建输出目录不存在！"
+            exit 1
+          fi
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
