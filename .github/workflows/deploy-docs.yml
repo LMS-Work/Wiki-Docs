@@ -1,15 +1,19 @@
 name: 部署文档
 
 on:
+  # 添加手动触发选项
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      # 只在文档相关文件改动时触发
+      # 扩展文档相关文件的范围
       - 'src/**'
       - 'docs/**'
+      - '.vuepress/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
+      - '.github/workflows/deploy-docs.yml'
 
 permissions:
   contents: write
