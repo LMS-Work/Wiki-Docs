@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/Wiki-Docs/",
+  base: process.env.GITHUB_ACTIONS ? "/Wiki-Docs/" : "/",
 
   lang: "zh-CN",
   title: "LittleSheep Minecraft Wiki",
