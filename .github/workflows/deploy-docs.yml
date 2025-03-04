@@ -63,7 +63,7 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm run docs:build
+          pnpm vuepress-vite build src --config src/.vuepress/prod.config.ts
           > src/.vuepress/dist/.nojekyll
         # 添加错误处理
         continue-on-error: false

@@ -23,7 +23,62 @@ export default hopeTheme({
   navbar,
 
   // 侧边栏
-  sidebar,
+  sidebar: {
+    "/help/": [
+      {
+        text: "帮助中心",
+        icon: "book",
+        prefix: "/help/",
+        children: [
+          "",
+          {
+            text: "游戏指南",
+            icon: "gamepad",
+            prefix: "game/",
+            collapsible: true,
+            children: [
+              {
+                text: "服务器",
+                icon: "server",
+                prefix: "fwq/",
+                collapsible: true,
+                children: ["1", "2", "3"],
+              },
+              {
+                text: "建筑",
+                icon: "building",
+                prefix: "jianzu/",
+                collapsible: true,
+                children: ["1", "2", "3", "4"],
+              },
+              {
+                text: "玩法",
+                icon: "dice",
+                prefix: "pt/",
+                collapsible: true,
+                children: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"],
+              },
+            ],
+          },
+          {
+            text: "加入服务器",
+            icon: "user-plus",
+            prefix: "join/",
+            collapsible: true,
+            children: ["1", "2", "3", "4", "5", "6", "QA"],
+          },
+          {
+            text: "设置",
+            icon: "gear",
+            prefix: "setting/",
+            collapsible: true,
+            children: ["1"],
+          },
+        ],
+      },
+    ],
+    "/404.html": [],
+  },
 
   // 页脚
   footer: '使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题',

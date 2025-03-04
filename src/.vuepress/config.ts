@@ -3,7 +3,9 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: process.env.GITHUB_ACTIONS ? "/Wiki-Docs/" : "/",
+  // 添加资源目录配置
+  public: "public",  // 静态资源目录
+  dest: "dist",      // 输出目录
 
   lang: "zh-CN",
   title: "LittleSheep Minecraft Wiki",
