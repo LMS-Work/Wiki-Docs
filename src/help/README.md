@@ -1,6 +1,6 @@
 ---
-shortTitle: 说明
-title: 帮助
+shortTitle: 文档说明
+title: 文档说明
 index: true
 icon: fa-solid fa-lightbulb
 isOriginal: true
@@ -19,7 +19,7 @@ category:
 
 - [x] **第一**：如何进入服务器
 - [x] **第二**：服务器玩法&命令介绍
-- [x] **第三**：客户端配置
+- [x] **第三**：游戏配置
 
 ## **反馈**
 

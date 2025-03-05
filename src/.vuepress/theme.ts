@@ -32,6 +32,13 @@ export default hopeTheme({
         children: [
           "",
           {
+            text: "加入服务器",
+            icon: "user-plus",
+            prefix: "join/",
+            collapsible: true,
+            children: ["1", "2", "3", "4", "5", "6", "QA"],
+          },  
+          {
             text: "游戏指南",
             icon: "gamepad",
             prefix: "game/",
@@ -61,14 +68,7 @@ export default hopeTheme({
             ],
           },
           {
-            text: "加入服务器",
-            icon: "user-plus",
-            prefix: "join/",
-            collapsible: true,
-            children: ["1", "2", "3", "4", "5", "6", "QA"],
-          },
-          {
-            text: "设置",
+            text: "游戏设置",
             icon: "gear",
             prefix: "setting/",
             collapsible: true,
