@@ -3,6 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   "/help/",
+  "/update/",
   {
     text: "官方QQ群",
     icon: "fab fa-qq",
