@@ -1,0 +1,12 @@
+# Cloudflare Pages + Pages Functions 配置
+# 用于 `wrangler pages deploy` 或 CI 配置参考。
+# UI 部署时也可以不用此文件，直接在 Pages 项目里填：Build command / Output directory。
+
+name = "lms-wiki"
+compatibility_date = "2025-12-30"
+
+# wrangler v3 支持用此字段声明 Pages 的构建产物目录
+pages_build_output_dir = "dist"
+
+[build]
+command = "pnpm docs:build"

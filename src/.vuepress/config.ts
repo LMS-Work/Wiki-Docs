@@ -3,6 +3,8 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
+  base: process.env.VUEPRESS_BASE ?? "/",
+
   // 添加资源目录配置
   public: "public",  // 静态资源目录
   dest: "dist",      // 输出目录

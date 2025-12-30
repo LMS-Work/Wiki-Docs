@@ -64,13 +64,13 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
           pnpm vuepress-vite build src --config src/.vuepress/prod.config.ts
-          > src/.vuepress/dist/.nojekyll
+          > dist/.nojekyll
         # 添加错误处理
         continue-on-error: false
 
       - name: 检查构建输出
         run: |
-          if [ ! -d "src/.vuepress/dist" ]; then
+          if [ ! -d "dist" ]; then
             echo "构建输出目录不存在！"
             exit 1
           fi
@@ -80,4 +80,4 @@ jobs:
         with:
           # 部署文档
           branch: gh-pages
-          folder: src/.vuepress/dist
+          folder: dist
